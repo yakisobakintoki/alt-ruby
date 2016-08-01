@@ -15,3 +15,8 @@ echo "* sha1sum:$(sha1sum $spath)" >> $info_path
 echo "* intaller:$(realpath $0)" >> $info_path
 echo "* unintaller:$(realpath ./uninstall.sh)" >> $info_path
 
+spath=$(realpath ./binmrr.sh)
+dpath=/usr/local/bin/binmrr
+ln -sf $spath $dpath
+chmod u+x $dpath
+
